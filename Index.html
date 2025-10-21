@@ -1,0 +1,1182 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JLPT N2：富士登山の会話（録音・シャドーイング） | 日本語学習ラボ</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --bg2:#0a0f1f;
+      --card:rgba(16,23,46,0.55);
+      --card-strong:rgba(20,28,56,0.7);
+      --card-border:rgba(255,255,255,0.08);
+      --accent:#00e7ff;
+      --accent2:#7c4dff;
+      --text:#e6f1ff;
+      --muted:#8aa0c5;
+    }
+
+    *{ box-sizing:border-box; margin:0; padding:0 }
+    html,body{ height:100% }
+    body{
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(0,231,255,0.18), transparent 60%),
+        radial-gradient(1000px 600px at 120% 10%, rgba(124,77,255,0.18), transparent 60%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      font-family: "Inter","Noto Sans JP","Noto Sans SC","Segoe UI",system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;
+      line-height:1.7;
+      padding:20px;
+      overflow-x:hidden;
+    }
+
+    /* --- Login Page Styles --- */
+    #login-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(11, 16, 32, 0.8);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      padding: 20px;
+    }
+
+    #login-container {
+      width: min(400px, 100%);
+      padding: 32px;
+      background: var(--card-strong);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    #login-container h2 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      color: var(--text);
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 12px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 1rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 12px rgba(0,231,255,0.3);
+    }
+
+    #login-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: none;
+      color: var(--bg);
+      padding: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: .2s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    #login-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 231, 255, 0.3);
+    }
+
+    #login-error {
+      color: #ff6b6b;
+      font-weight: 600;
+      margin-top: 15px;
+      min-height: 1.2em; /* Prevents layout shift */
+      display: none; /* Initially hidden */
+    }
+
+    /* --- End Login Page Styles --- */
+
+    .container{
+      max-width:1100px;
+      margin:78px auto 0;
+      background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
+      border:1px solid var(--card-border);
+      border-radius:16px;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.4),
+        0 0 0 1px rgba(255,255,255,0.04) inset;
+      backdrop-filter: blur(10px) saturate(140%);
+    }
+
+    header{
+      padding:28px 24px;
+      border-radius:16px 16px 0 0;
+      background:
+        linear-gradient(135deg, rgba(0,231,255,0.18), rgba(124,77,255,0.18)),
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border-bottom:1px solid var(--card-border);
+    }
+    h1{ font-weight:800; letter-spacing:1px; font-size:2.0rem; line-height:1.2 }
+    .content{ display:flex; flex-wrap:wrap; gap:16px; padding:20px }
+
+    .paragraph-section, .vocab-section{
+      flex:1; min-width:320px;
+      padding:20px;
+      background:var(--card);
+      border:1px solid var(--card-border);
+      border-radius:12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    }
+    .vocab-section{ background:rgba(20,28,56,0.7) }
+
+    h2{
+      margin-bottom:14px; font-size:1.2rem; letter-spacing:0.5px;
+      color:#d7e8ff;
+      border-bottom:1px dashed rgba(255,255,255,0.12);
+      padding-bottom:8px;
+    }
+
+    /* Top controls bar */
+    .controls-wrapper{
+      position:fixed; top:0; left:50%; transform:translateX(-50%);
+      width:min(1100px, calc(100% - 40px));
+      background: rgba(14, 23, 48, 0.7);
+      border:1px solid var(--card-border);
+      border-top:0; border-radius:0 0 12px 12px;
+      z-index:9999; padding:10px 16px;
+      display:flex; align-items:center; justify-content:flex-start; gap:12px; flex-wrap:wrap;
+      backdrop-filter: blur(10px) saturate(140%);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.03) inset;
+    }
+    .controls-inline{ display:inline-flex; align-items:center; gap:8px; flex-wrap:wrap }
+    label{ color:#a9c7ff; font-weight:600; font-size:0.92rem }
+    input[type="range"]{
+      width:160px; height:6px; appearance:none; background:transparent;
+    }
+    input[type="range"]::-webkit-slider-runnable-track{
+      height:6px; border-radius:999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,0.08);
+    }
+    input[type="range"]::-webkit-slider-thumb{
+      appearance:none; width:16px; height:16px; margin-top:-5px; border-radius:50%;
+      background:#fff; border:2px solid var(--accent);
+      box-shadow: 0 0 12px rgba(0,231,255,0.6);
+    }
+    .speed-display{ color:#b6d4ff; font-weight:700; font-size:0.95rem }
+    .toolbar-btn{
+      background: linear-gradient(135deg, rgba(0,231,255,0.25), rgba(124,77,255,0.25));
+      border:1px solid rgba(255,255,255,0.14);
+      color:#eaf6ff;
+      padding:8px 12px; border-radius:10px; cursor:pointer;
+      font-size:0.95rem; display:inline-flex; align-items:center; gap:8px;
+      transition:.2s ease; letter-spacing:0.2px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25), inset 0 0 12px rgba(255,255,255,0.05);
+    }
+    .toolbar-btn:hover{ transform:translateY(-1px); box-shadow:0 8px 18px rgba(0,0,0,0.35), 0 0 18px rgba(0,231,255,0.22) }
+
+    /* --- User Info Display --- */
+    #user-info {
+      display: none; /* Hidden by default, shown via JS */
+      align-items: center;
+      gap: 16px;
+      margin-left: auto; /* Pushes this to the right */
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    #loggedInUsername {
+      font-weight: 700;
+      color: var(--accent);
+    }
+    #logout-btn {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Conversation lines */
+    #jpText{ display:block }
+    .line{
+      display:grid;
+      grid-template-columns: 88px 1fr;
+      grid-template-areas:
+        "speaker text"
+        "controls controls";
+      gap:10px 12px;
+      align-items:flex-start;
+      padding:12px 12px;
+      margin-bottom:12px;
+      background: rgba(12, 20, 44, 0.55);
+      border:1px solid var(--card-border);
+      border-radius:10px;
+      overflow: hidden;
+    }
+    .speaker{
+      grid-area: speaker;
+      align-self: start;
+      width: 88px;
+      min-width: 88px;
+      text-align: center;
+      background: rgba(0,231,255,0.12);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:10px;
+      padding:6px 8px;
+      font-weight:800;
+      color:#9fe7ff;
+      letter-spacing:0.5px;
+      box-shadow: inset 0 0 10px rgba(0,231,255,0.06);
+    }
+    .line-text{
+      grid-area: text;
+      min-width:0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .line-trans{
+      display:block;
+      margin-top:6px;
+      color:#a9c7ff;
+      font-size:0.95rem;
+    }
+    .line-controls{
+      grid-area: controls;
+      display:flex; gap:6px; flex-wrap:wrap; align-items:center;
+    }
+    .btn{
+      padding:4px 8px; font-size:0.9rem; border-radius:8px; cursor:pointer; color:#eaf6ff;
+      background: rgba(0,231,255,0.15); border:1px solid rgba(255,255,255,0.15);
+    }
+    .btn:hover{ background: rgba(0,231,255,0.25) }
+    .btn[disabled]{ opacity:0.45; cursor:not-allowed }
+    .rec-dot{ width:8px; height:8px; border-radius:50%; background:#ff4d4d; display:inline-block; box-shadow:0 0 12px #ff4d4d; margin-left:4px; visibility:hidden }
+    .line.recording .rec-dot{ visibility:visible }
+
+    .sent{
+      display:inline;
+      position:relative;
+      padding:0 2px;
+      border-radius:6px;
+      transition: color .18s ease, text-shadow .18s ease;
+      background-repeat: no-repeat;
+      background-size: var(--kp, 0%) 100%;
+    }
+    .sent.active{
+      background-image: linear-gradient(90deg, rgba(0,231,255,0.22), rgba(0,231,255,0.22));
+      color:#eaffff; text-shadow: 0 0 8px rgba(0,231,255,0.35);
+      box-shadow: 0 0 0 2px rgba(0,231,255,0.12) inset;
+    }
+    .sent.completed{ color:#cfe3ff; background-image: linear-gradient(90deg, rgba(0,231,255,0.18), rgba(124,77,255,0.18)) }
+
+    .word{
+      position:relative; cursor:pointer; padding:0 2px;
+      border-bottom:1.5px dashed var(--accent); transition:all .18s ease;
+    }
+    .word:hover{ background:rgba(0,231,255,0.08); box-shadow:0 0 0 3px rgba(0,231,255,0.08) }
+    .popup{
+      position:absolute; bottom:100%; left:50%; transform: translateX(-50%) translateY(-8px);
+      background: linear-gradient(180deg, #0b1533 0%, #0c1331 100%);
+      color:#cfe8ff; padding:6px 8px; border-radius:8px; font-size:0.88rem; white-space:nowrap; z-index:50;
+      border:1px solid rgba(0,231,255,0.25);
+      display:none; pointer-events:none;
+    }
+    .word:hover .popup{ display:block }
+    .popup::after{
+      content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+      border:6px solid transparent; border-top-color:#0b1533;
+      filter: drop-shadow(0 -1px 0 rgba(0,231,255,0.25));
+    }
+
+    .vocab-list{ list-style:none; padding-left:0 }
+    .vocab-item{
+      display:flex; justify-content:space-between; align-items:center; gap:10px;
+      padding:12px 14px; margin-bottom:10px;
+      background: rgba(12, 20, 44, 0.6);
+      border:1px solid var(--card-border);
+      border-radius:10px;
+    }
+    .hanzi{ font-size:1.1rem; font-weight:800; color:#9fe7ff }
+    .pinyin{ color:#9aaed6; font-style:italic }
+    .meaning{ color:#e6f1ff }
+
+    .grammar-section{
+      padding:20px; margin:0 20px 20px 20px;
+      background: rgba(16,23,46,0.55);
+      border:1px solid var(--card-border);
+      border-radius:12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    }
+    .grammar-item{
+      margin-bottom:16px; padding:14px;
+      background: rgba(12, 20, 44, 0.55);
+      border:1px solid var(--card-border);
+      border-radius:10px;
+    }
+    .grammar-point{ font-weight:800; color:#b0f0ff; margin-bottom:4px }
+    .grammar-explanation{ color:#bcd1ff; margin-bottom:6px }
+    .example-reading{ display:block; font-style:italic; color:#a1b7ea; font-size:0.92rem; margin-top:4px }
+    .example-meaning{ display:block; color:#e6f1ff; font-size:0.92rem; margin-top:2px }
+
+    @media (max-width: 700px){
+      .controls-wrapper{ justify-content: center; }
+      #user-info { margin-left: 0; width: 100%; justify-content: space-between; margin-top: 10px; }
+      .line{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "speaker"
+          "text"
+          "controls";
+      }
+      .speaker{ width:auto; min-width:0; justify-self:start }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login-overlay">
+    <div id="login-container">
+        <h2>JLPT N2 Lab Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" id="login-btn">Login</button>
+            <p id="login-error"></p>
+        </form>
+    </div>
+  </div>
+
+  <main id="main-content" style="display: none;">
+    <div class="controls-wrapper" id="controlsBar">
+      <div class="controls-inline">
+        <label for="speedRange">速度:</label>
+        <input type="range" id="speedRange" min="0.05" max="2" step="0.05" value="0.95" />
+        <span class="speed-display" id="speedValue">0.95</span>
+      </div>
+      <button class="toolbar-btn" id="toggleTranslation">各行の英訳を非表示</button>
+      <span id="micSupportMsg" style="color:#a9c7ff; font-size:0.9rem"></span>
+      
+      <!-- NEW: User Info and Logout Button -->
+      <div id="user-info">
+        <span>Welcome, <strong id="loggedInUsername"></strong></span>
+        <button id="logout-btn" class="toolbar-btn">Logout</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <header>
+        <h1>JLPT N2 学習：富士登山の会話（録音・シャドーイング）</h1>
+      </header>
+      
+      <div class="content">
+        <div class="paragraph-section">
+          <h2>会話（直也 × 美咲）</h2>
+          <div id="jpText">
+            <!-- Lines start -->
+            <div class="line" data-idx="0">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="0">
+                  来月、富士登山しない？今回は<span class="word">吉田ルート<span class="popup">よしだ — Yoshida trail</span></span>で行こうと思ってる。
+                </span>
+                <div class="line-trans">Want to climb Mt. Fuji next month? I’m thinking of the Yoshida trail this time.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="0">▶️</button>
+                <button class="btn" data-action="pause" data-idx="0">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="0">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="0">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="0">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="0" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="0" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="1">
+              <div class="speaker">美咲</div>
+              <div class="line-text">
+                <span class="sent" data-idx="1">
+                  賛成。<span class="word">人気<span class="popup">にんき — popular</span></span><span class="word">とはいえ<span class="popup">— though</span></span>、準備は万全にしないとね。
+                </span>
+                <div class="line-trans">I’m in. Though it’s popular, we still need to prepare thoroughly.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="1">▶️</button>
+                <button class="btn" data-action="pause" data-idx="1">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="1">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="1">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="1">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="1" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="1" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="2">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="2">
+                  <span class="word">山小屋<span class="popup">やまごや — mountain hut</span></span>の予約を取らない<span class="word">ことには<span class="popup">— unless</span></span>、頂上で<span class="word">御来光<span class="popup">ごらいこう — sunrise at summit</span></span>を見るのは厳しいかも。
+                </span>
+                <div class="line-trans">Unless we book a hut, seeing the sunrise at the summit might be tough.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="2">▶️</button>
+                <button class="btn" data-action="pause" data-idx="2">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="2">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="2">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="2">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="2" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="2" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="3">
+              <div class="speaker">美咲</div>
+              <div class="line-text">
+                <span class="sent" data-idx="3">
+                  <span class="word">五合目<span class="popup">ごごうめ — 5th station</span></span>から夜に登る<span class="word">一方で<span class="popup">— while/on the other hand</span></span>、冷え込むから<span class="word">防寒着<span class="popup">ぼうかんぎ — warm layer</span></span>は必須だね。
+                </span>
+                <div class="line-trans">We’ll climb at night from the 5th station, but it’ll be cold—warm layers are essential.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="3">▶️</button>
+                <button class="btn" data-action="pause" data-idx="3">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="3">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="3">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="3">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="3" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="3" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="4">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="4">
+                  高度が上がれば上がる<span class="word">ほど<span class="popup">— the more ... the more</span></span>気温が下がるし、風も強まりがちだね。
+                </span>
+                <div class="line-trans">The higher we go, the more the temperature drops—and the wind tends to strengthen.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="4">▶️</button>
+                <button class="btn" data-action="pause" data-idx="4">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="4">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="4">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="4">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="4" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="4" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="5">
+              <div class="speaker">美咲</div>
+              <div class="line-text">
+                <span class="sent" data-idx="5">
+                  <span class="word">高山病<span class="popup">こうざんびょう — altitude sickness</span></span>になり<span class="word">かねない<span class="popup">— might (negative)</span></span>から、前日は睡眠と水分をしっかり取ろう。
+                </span>
+                <div class="line-trans">We might get altitude sickness, so let’s get plenty of sleep and water the day before.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="5">▶️</button>
+                <button class="btn" data-action="pause" data-idx="5">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="5">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="5">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="5">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="5" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="5" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="6">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="6">
+                  行動食と水は各自で。無理にペースを上げる<span class="word">わけにはいかない<span class="popup">— mustn’t (for good reason)</span></span>し、<span class="word">マイペース<span class="popup">— at one’s own pace</span></span>で行こう。
+                </span>
+                <div class="line-trans">Bring your own snacks and water. We mustn’t speed up recklessly—let’s go at our own pace.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="6">▶️</button>
+                <button class="btn" data-action="pause" data-idx="6">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="6">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="6">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="6">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="6" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="6" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="7">
+              <div class="speaker">美咲</div>
+              <div class="line-text">
+                <span class="sent" data-idx="7">
+                  ルートは吉田に<span class="word">限らず<span class="popup">かぎらず — not limited to</span></span>、<span class="word">須走<span class="popup">すばしり — Subashiri</span></span>や<span class="word">富士宮<span class="popup">ふじのみや — Fujinomiya</span></span>もあるけど、今回はアクセス重視だよね。
+                </span>
+                <div class="line-trans">There are also Subashiri and Fujinomiya routes, not just Yoshida, but this time let’s prioritize access.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="7">▶️</button>
+                <button class="btn" data-action="pause" data-idx="7">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="7">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="7">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="7">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="7" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="7" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="8">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="8">
+                  うん。渋滞<span class="word">というより<span class="popup">— rather than</span></span>、写真を撮りたくて立ち止まる人が多い印象かな。
+                </span>
+                <div class="line-trans">Yeah. It’s less “traffic” than lots of people stopping to take photos.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="8">▶️</button>
+                <button class="btn" data-action="pause" data-idx="8">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="8">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="8">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="8">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="8" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="8" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="9">
+              <div class="speaker">美咲</div>
+              <div class="line-text">
+                <span class="sent" data-idx="9">
+                  <span class="word">天候<span class="popup">てんこう — weather</span></span><span class="word">次第で<span class="popup">しだいで — depending on</span></span>引き返す判断もあり。山の天気は変わりやすいからね。
+                </span>
+                <div class="line-trans">Depending on the weather, turning back is an option. Mountain weather changes easily.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="9">▶️</button>
+                <button class="btn" data-action="pause" data-idx="9">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="9">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="9">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="9">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="9" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="9" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="10">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="10">
+                  <span class="word">レインウェア<span class="popup">— rain wear</span></span>と<span class="word">ヘッドランプ<span class="popup">— headlamp</span></span>、手袋、<span class="word">ストック<span class="popup">— trekking poles</span></span>は必携。装備を軽視する<span class="word">わけにはいかない<span class="popup">— mustn’t</span></span>よね。
+                </span>
+                <div class="line-trans">Bring rainwear, a headlamp, gloves, and poles. We mustn’t underestimate gear.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="10">▶️</button>
+                <button class="btn" data-action="pause" data-idx="10">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="10">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="10">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="10">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="10" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="10" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="11">
+              <div class="speaker">美咲</div>
+              <div class="line-text">
+                <span class="sent" data-idx="11">
+                  トイレはチップ制だから小銭も。ゴミは必ず持ち帰る<span class="word">ことになっている<span class="popup">— it’s the rule</span></span>よ。
+                </span>
+                <div class="line-trans">Toilets are tip-based, so bring coins. And we must pack out all trash—that’s the rule.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="11">▶️</button>
+                <button class="btn" data-action="pause" data-idx="11">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="11">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="11">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="11">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="11" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="11" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="12">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="12">
+                  <span class="word">入山料<span class="popup">にゅうざんりょう — conservation fee</span></span>の協力金もあるよね。保全のためだし、払うつもり。
+                </span>
+                <div class="line-trans">There’s also a conservation fee. It’s for preservation—I’m planning to pay it.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="12">▶️</button>
+                <button class="btn" data-action="pause" data-idx="12">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="12">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="12">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="12">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="12" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="12" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="13">
+              <div class="speaker">美咲</div>
+              <div class="line-text">
+                <span class="sent" data-idx="13">
+                  出発は夕方にして六合目で小休止、その<span class="word">上で<span class="popup">うえで — upon/after</span></span>八合目まで一気に行こうか。
+                </span>
+                <div class="line-trans">Let’s start in the evening, take a short rest at the 6th station, then push to the 8th.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="13">▶️</button>
+                <button class="btn" data-action="pause" data-idx="13">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="13">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="13">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="13">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="13" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="13" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="14">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="14">
+                  体調に<span class="word">応じて<span class="popup">おうじて — according to</span></span>ペースを調整しよう。調子が悪ければ無理はしない。
+                </span>
+                <div class="line-trans">Let’s adjust our pace according to how we feel—and not push if we feel off.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="14">▶️</button>
+                <button class="btn" data-action="pause" data-idx="14">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="14">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="14">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="14">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="14" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="14" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="15">
+              <div class="speaker">美咲</div>
+              <div class="line-text">
+                <span class="sent" data-idx="15">
+                  写真はRAWでも撮る？夜間は手ブレしがちだから三脚は必要…<span class="word">とはいえ<span class="popup">— that said</span></span>荷物が増えるね。
+                </span>
+                <div class="line-trans">Will you shoot RAW? At night it’s easy to blur, so a tripod helps—though it adds weight.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="15">▶️</button>
+                <button class="btn" data-action="pause" data-idx="15">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="15">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="15">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="15">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="15" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="15" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="16">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="16">
+                  ミニ三脚で代用かな。<span class="word">赤色灯<span class="popup">せきしょくとう — red light</span></span>があるヘッドランプだと眩しくない<span class="word">に違いない<span class="popup">— no doubt</span></span>。
+                </span>
+                <div class="line-trans">Maybe a mini tripod. A headlamp with a red light will surely be less glaring.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="16">▶️</button>
+                <button class="btn" data-action="pause" data-idx="16">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="16">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="16">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="16">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="16" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="16" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="17">
+              <div class="speaker">美咲</div>
+              <div class="line-text">
+                <span class="sent" data-idx="17">
+                  <span class="word">御来光<span class="popup">ごらいこう — sunrise</span></span>は山頂だけ<span class="word">に限らず<span class="popup">— not limited to</span></span>、八合目でも十分きれいだよ。
+                </span>
+                <div class="line-trans">You can catch a beautiful sunrise not only at the summit, but also around the 8th station.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="17">▶️</button>
+                <button class="btn" data-action="pause" data-idx="17">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="17">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="17">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="17">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="17" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="17" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="18">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="18">
+                  それなら混雑を避けられる<span class="word">一方で<span class="popup">— on the other hand</span></span>、下山開始も早められるね。
+                </span>
+                <div class="line-trans">Then we can avoid the crowd, and start descending earlier as well.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="18">▶️</button>
+                <button class="btn" data-action="pause" data-idx="18">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="18">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="18">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="18">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="18" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="18" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="19">
+              <div class="speaker">美咲</div>
+              <div class="line-text">
+                <span class="sent" data-idx="19">
+                  無補給で登る<span class="word">わけではない<span class="popup">— not necessarily</span></span>けど、売店は混むから、必要最低限は持っていこう。
+                </span>
+                <div class="line-trans">We’re not climbing without buying anything, but shops get crowded—let’s bring the essentials.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="19">▶️</button>
+                <button class="btn" data-action="pause" data-idx="19">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="19">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="19">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="19">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="19" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="19" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+  
+            <div class="line" data-idx="20">
+              <div class="speaker">直也</div>
+              <div class="line-text">
+                <span class="sent" data-idx="20">
+                  了解。計画を共有した<span class="word">上で<span class="popup">うえで — upon/after</span></span>山小屋に予約を入れるね。きっと忘れられない一日になる<span class="word">に違いない<span class="popup">— no doubt</span></span>。
+                </span>
+                <div class="line-trans">Got it. I’ll share the plan and book a hut. It’ll no doubt be unforgettable.</div>
+              </div>
+              <div class="line-controls">
+                <button class="btn" data-action="play" data-idx="20">▶️</button>
+                <button class="btn" data-action="pause" data-idx="20">⏸️</button>
+                <button class="btn" data-action="resume" data-idx="20">⏯️</button>
+                <button class="btn" data-action="stop" data-idx="20">⏹️</button>
+                <button class="btn" data-action="rec" data-idx="20">⏺️</button>
+                <button class="btn" data-action="recstop" data-idx="20" disabled>⏹️ Rec</button>
+                <button class="btn" data-action="playrec" data-idx="20" disabled>▶️ Me</button>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+            <!-- Lines end -->
+          </div>
+        </div>
+
+        <div class="vocab-section">
+          <h2>語彙リスト</h2>
+          <ul class="vocab-list">
+            <li class="vocab-item"><span class="hanzi">吉田ルート</span><div><span class="pinyin">Yoshida route</span> <span class="meaning">- Yoshida trail</span></div></li>
+            <li class="vocab-item"><span class="hanzi">御来光</span><div><span class="pinyin">goraikō</span> <span class="meaning">- sunrise at summit</span></div></li>
+            <li class="vocab-item"><span class="hanzi">五合目 / 六合目 / 八合目</span><div><span class="pinyin">gogōme / rogōme / hachigōme</span> <span class="meaning">- 5th/6th/8th station</span></div></li>
+            <li class="vocab-item"><span class="hanzi">山小屋</span><div><span class="pinyin">yamagoya</span> <span class="meaning">- mountain hut</span></div></li>
+            <li class="vocab-item"><span class="hanzi">防寒着 / レインウェア</span><div><span class="pinyin">bōkan-gi / rainwear</span> <span class="meaning">- warm layer / rain gear</span></div></li>
+            <li class="vocab-item"><span class="hanzi">ヘッドランプ / ストック</span><div><span class="pinyin">headlamp / stock</span> <span class="meaning">- headlamp / trekking poles</span></div></li>
+            <li class="vocab-item"><span class="hanzi">行動食</span><div><span class="pinyin">kōdō-shoku</span> <span class="meaning">- trail snacks</span></div></li>
+            <li class="vocab-item"><span class="hanzi">高山病</span><div><span class="pinyin">kōzanbyō</span> <span class="meaning">- altitude sickness</span></div></li>
+            <li class="vocab-item"><span class="hanzi">入山料（協力金）</span><div><span class="pinyin">nyūzanryō</span> <span class="meaning">- conservation fee</span></div></li>
+            <li class="vocab-item"><span class="hanzi">順応</span><div><span class="pinyin">jun'nō</span> <span class="meaning">- acclimatization</span></div></li>
+            <li class="vocab-item"><span class="hanzi">渋滞</span><div><span class="pinyin">jūtai</span> <span class="meaning">- congestion; bottleneck</span></div></li>
+            <li class="vocab-item"><span class="hanzi">天候 / 風</span><div><span class="pinyin">tenkō / kaze</span> <span class="meaning">- weather / wind</span></div></li>
+            <li class="vocab-item"><span class="hanzi">持ち帰り（ゴミ）</span><div><span class="pinyin">mochikaeri</span> <span class="meaning">- pack out trash</span></div></li>
+            <li class="vocab-item"><span class="hanzi">トイレ（チップ制）</span><div><span class="pinyin">toilet (tip)</span> <span class="meaning">- tip-based toilets</span></div></li>
+            <li class="vocab-item"><span class="hanzi">赤色灯</span><div><span class="pinyin">sekishokutō</span> <span class="meaning">- red light (headlamp)</span></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grammar-section">
+        <h2>文法</h2>
+        <div class="grammar-item">
+          <div class="grammar-point">〜とはいえ</div>
+          <div class="grammar-explanation">前件を認めつつ、後件で別視点を述べる。「…だけれども」。</div>
+          <div><strong>例文:</strong> 人気とはいえ、準備は万全にすべきだ。<span class="example-reading">Ninki to wa ie, junbi wa banzen ni subeki da.</span><span class="example-meaning">Though it’s popular, you should prepare thoroughly.</span></div>
+        </div>
+        <div class="grammar-item">
+          <div class="grammar-point">Vない + ことには</div>
+          <div class="grammar-explanation">「…しなければ（…できない）」の条件不成立。</div>
+          <div><strong>例文:</strong> 山小屋を予約しないことには御来光は難しい。<span class="example-reading">Yamagoya o yoyaku shinai koto ni wa goraikō wa muzukashii.</span><span class="example-meaning">Unless you book a hut, seeing the sunrise is hard.</span></div>
+        </div>
+        <div class="grammar-item">
+          <div class="grammar-point">〜一方で</div>
+          <div class="grammar-explanation">同時に存在する別側面を対比する。</div>
+          <div><strong>例文:</strong> 夜間は空いている一方で、気温が下がる。<span class="example-reading">Yakan wa suite iru ippō de, kion ga sagaru.</span><span class="example-meaning">At night it’s less crowded, but the temperature drops.</span></div>
+        </div>
+        <div class="grammar-item">
+          <div class="grammar-point">Vば Vほど</div>
+          <div class="grammar-explanation">「…すればするほど…」比例関係。</div>
+          <div><strong>例文:</strong> 高度が上がれば上がるほど寒くなる。<span class="example-reading">Kōdo ga agareba agaru hodo samuku naru.</span><span class="example-meaning">The higher you go, the colder it gets.</span></div>
+        </div>
+        <div class="grammar-item">
+          <div class="grammar-point">(普) かねない</div>
+          <div class="grammar-explanation">望ましくない結果の可能性を示す。</div>
+          <div><strong>例文:</strong> 無理をすると高山病になりかねない。<span class="example-reading">Muri o suru to kōzanbyō ni nari kanenai.</span><span class="example-meaning">If you push too hard, you might get altitude sickness.</span></div>
+        </div>
+        <div class="grammar-item">
+          <div class="grammar-point">N に限らず</div>
+          <div class="grammar-explanation">「Nだけでなく」範囲の拡大。</div>
+          <div><strong>例文:</strong> 山頂に限らず八合目からの御来光も美しい。<span class="example-reading">Sanchō ni kagirazu hachigōme kara no goraikō mo utsukushii.</span><span class="example-meaning">Sunrises from the 8th station are beautiful too.</span></div>
+        </div>
+        <div class="grammar-item">
+          <div class="grammar-point">(普) というより</div>
+          <div class="grammar-explanation">表現を言い改める。「…というより（むしろ）…」。</div>
+          <div><strong>例文:</strong> 渋滞というより撮影待ちだ。<span class="example-reading">Jūtai to iu yori satsuei-machi da.</span><span class="example-meaning">It’s more waiting to take photos than an actual jam.</span></div>
+        </div>
+        <div class="grammar-item">
+          <div class="grammar-point">N 次第で / 次第だ</div>
+          <div class="grammar-explanation">「…によって決まる／変わる」。</div>
+          <div><strong>例文:</strong> 天候次第で引き返す。<span class="example-reading">Tenkō shidai de hikikaesu.</span><span class="example-meaning">We’ll turn back depending on the weather.</span></div>
+        </div>
+        <div class="grammar-item">
+          <div class="grammar-point">N に応じて</div>
+          <div class="grammar-explanation">「…に合わせて／…に従って」調整。</div>
+          <div><strong>例文:</strong> 体調に応じてペースを落とす。<span class="example-reading">Taichō ni ōjite pēsu o otosu.</span><span class="example-meaning">Slow down according to your condition.</span></div>
+        </div>
+        <div class="grammar-item">
+          <div class="grammar-point">(普) わけにはいかない</div>
+          <div class="grammar-explanation">社会的・道義的にできない強い禁止。</div>
+          <div><strong>例文:</strong> 装備を軽視するわけにはいかない。<span class="example-reading">Sōbi o keishi suru wake ni wa ikanai.</span><span class="example-meaning">We mustn’t underestimate gear.</span></div>
+        </div>
+        <div class="grammar-item">
+          <div class="grammar-point">(普) に違いない</div>
+          <div class="grammar-explanation">話し手の確信。「きっと…だ」。</div>
+          <div><strong>例文:</strong> 今日は忘れられない一日になるに違いない。<span class="example-reading">Kyō wa wasurerarenai ichinichi ni naru ni chigainai.</span><span class="example-meaning">It’ll surely be an unforgettable day.</span></div>
+        </div>
+      </div>
+
+      <footer style="text-align:center; padding:20px; color:#9fb6df; font-size:0.92rem; border-top:1px solid var(--card-border); background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border-radius:0 0 16px 16px;">
+        <p>日本語学習ラボ | 作成: SWL — Powered by AI</p>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // --- LOGIN SCRIPT START ---
+    document.addEventListener('DOMContentLoaded', () => {
+        const users = {
+          // Admin User (1)
+          "admin": "AdminPass2024!",
+          // Regular Users (9) for a total of 10 users
+          "naoya": "fujiClimb",
+          "misaki": "sunrise24",
+          "user3": "pass3",
+          "user4": "pass4",
+          "user5": "pass5",
+          "user6": "pass6",
+          "user7": "pass7",
+          "user8": "pass8",
+          "user9": "pass9"
+        };
+
+        const loginForm = document.getElementById('login-form');
+        const mainContent = document.getElementById('main-content');
+        const loginOverlay = document.getElementById('login-overlay');
+        const errorMsg = document.getElementById('login-error');
+        const userInfo = document.getElementById('user-info');
+        const loggedInUsername = document.getElementById('loggedInUsername');
+        const logoutBtn = document.getElementById('logout-btn');
+
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                errorMsg.style.display = 'none';
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                if (users[username] && users[username] === password) {
+                    // --- Successful login ---
+                    loginOverlay.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    
+                    // Display user info in the top bar
+                    loggedInUsername.textContent = username;
+                    userInfo.style.display = 'flex';
+
+                    // Recalculate layout offset for the main content
+                    offsetContainer();
+                } else {
+                    // --- Failed login ---
+                    errorMsg.textContent = 'Invalid username or password.';
+                    errorMsg.style.display = 'block';
+                }
+            });
+        }
+        
+        // --- Logout Logic ---
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', () => {
+                // Hide main content and user info bar
+                mainContent.style.display = 'none';
+                userInfo.style.display = 'none';
+                
+                // Show login screen
+                loginOverlay.style.display = 'flex';
+                
+                // Clear the form fields for the next login
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+                errorMsg.style.display = 'none';
+            });
+        }
+    });
+    // --- LOGIN SCRIPT END ---
+
+
+    // --- APPLICATION SCRIPT START ---
+    // Layout offset
+    function offsetContainer(){
+      const bar = document.getElementById('controlsBar');
+      const container = document.querySelector('.container');
+      if(bar && container){ container.style.marginTop = (bar.offsetHeight + 16) + 'px'; }
+    }
+    window.addEventListener('load', offsetContainer);
+    window.addEventListener('resize', offsetContainer);
+
+    // Elements
+    const speedRange = document.getElementById('speedRange');
+    const speedValue = document.getElementById('speedValue');
+    const jpText = document.getElementById('jpText');
+    const toggleBtn = document.getElementById('toggleTranslation');
+    const micSupportMsg = document.getElementById('micSupportMsg');
+
+    // Feature detection
+    const synthSupported = 'speechSynthesis' in window;
+    const micSupported = !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+    if(!synthSupported){
+      alert('このブラウザは音声読み上げに対応していません。Chrome / Edge をお試しください。');
+    }
+    micSupportMsg.textContent = micSupported ? '' : 'このブラウザではマイク録音がサポートされていません。';
+
+    // Speed
+    function updateSpeedLabel(){ speedValue.textContent = parseFloat(speedRange.value).toFixed(2); }
+    updateSpeedLabel();
+    speedRange.addEventListener('input', updateSpeedLabel);
+
+    // Toggle translations per line
+    let translationsVisible = true;
+    toggleBtn.addEventListener('click', () => {
+      translationsVisible = !translationsVisible;
+      document.querySelectorAll('.line-trans').forEach(el => { el.style.display = translationsVisible ? '' : 'none'; });
+      toggleBtn.textContent = translationsVisible ? '各行の英訳を非表示' : '各行の英訳を表示';
+    });
+
+    // Helpers
+    function getSentEl(idx){ return document.querySelector('.sent[data-idx="' + idx + '"]'); }
+    function cleanTextFromSent(sentEl){
+      if(!sentEl) return '';
+      const clone = sentEl.cloneNode(true);
+      clone.querySelectorAll('.popup').forEach(p => p.remove());
+      return clone.textContent.replace(/\s+/g,' ').trim();
+    }
+    function setActive(idx){
+      document.querySelectorAll('.sent').forEach(el => {
+        el.classList.remove('active'); el.classList.remove('completed'); el.style.setProperty('--kp','0%');
+      });
+      const el = getSentEl(idx);
+      if(el){ el.classList.add('active'); el.scrollIntoView({behavior:'smooth', block:'center', inline:'nearest'}); }
+    }
+    function setProgress(idx, ratio){
+      const el = getSentEl(idx);
+      if(!el) return;
+      const pct = Math.max(0, Math.min(100, Math.round(ratio*100)));
+      el.style.setProperty('--kp', pct + '%');
+    }
+    function setCompleted(idx){
+      const el = getSentEl(idx);
+      if(el){ el.classList.remove('active'); el.classList.add('completed'); el.style.setProperty('--kp','100%'); }
+    }
+    function resetLineVisual(idx){
+      const el = getSentEl(idx);
+      if(el){ el.classList.remove('active','completed'); el.style.setProperty('--kp','0%'); }
+    }
+
+    // TTS state
+    let currentIdx = null;
+    let progressTimer = null;
+    let paused = false;
+
+    function clearProgressTimer(){ if(progressTimer){ clearInterval(progressTimer); progressTimer = null; } }
+    function startProgressTimer(idx, text){
+      clearProgressTimer();
+      const rate = parseFloat(speedRange.value);
+      const baseCPS = 13;
+      const duration = Math.max(0.8, text.length / (baseCPS * rate));
+      const start = performance.now();
+      progressTimer = setInterval(() => {
+        const elapsed = (performance.now() - start) / 1000;
+        const p = Math.min(1, elapsed / duration);
+        setProgress(idx, p);
+        if(p >= 1){ clearProgressTimer(); }
+      }, 50);
+    }
+    function stopSpeaking(){
+      if(synthSupported) window.speechSynthesis.cancel();
+      clearProgressTimer();
+      if(currentIdx !== null){ resetLineVisual(currentIdx); }
+      currentIdx = null; paused = false;
+    }
+    function playLine(idx){
+      if(!synthSupported) return;
+      const sentEl = getSentEl(idx);
+      if(!sentEl) return;
+      stopSpeaking();
+      const text = cleanTextFromSent(sentEl);
+      setActive(idx);
+      const utt = new SpeechSynthesisUtterance(text);
+      utt.lang = 'ja-JP';
+      utt.rate = parseFloat(speedRange.value);
+      utt.onstart = () => { currentIdx = idx; paused = false; startProgressTimer(idx, text); };
+      utt.onboundary = (e) => {
+        if(typeof e.charIndex === 'number' && text.length > 0){
+          const ratio = Math.min(1, e.charIndex / text.length);
+          setProgress(idx, ratio);
+        }
+      };
+      utt.onend = () => { clearProgressTimer(); setCompleted(idx); currentIdx = null; paused = false; };
+      window.speechSynthesis.speak(utt);
+    }
+    function pauseLine(idx){
+      if(!synthSupported) return;
+      if(currentIdx !== idx || paused) return;
+      window.speechSynthesis.pause(); paused = true;
+    }
+    function resumeLine(idx){
+      if(!synthSupported) return;
+      if(currentIdx !== idx || !paused) return;
+      window.speechSynthesis.resume(); paused = false;
+    }
+    function stopLine(idx){
+      if(currentIdx === idx){ stopSpeaking(); }
+      resetLineVisual(idx);
+    }
+
+    // Recording per line
+    const recordings = new Map(); // idx -> { blobUrl, chunks, recorder, stream }
+    let activeRecIdx = null;
+
+    async function startRecording(idx){
+      if(!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia)){
+        alert('マイク録音はサポートされていません。'); return;
+      }
+      if(activeRecIdx !== null && recordings.get(activeRecIdx)?.recorder?.state === 'recording'){
+        await stopRecording(activeRecIdx);
+      }
+      const lineEl = document.querySelector('.line[data-idx="'+idx+'"]');
+      const btnRec = lineEl.querySelector('[data-action="rec"]');
+      const btnRecStop = lineEl.querySelector('[data-action="recstop"]');
+      const btnPlayRec = lineEl.querySelector('[data-action="playrec"]');
+      try{
+        const stream = await navigator.mediaDevices.getUserMedia({ audio:true });
+        const chunks = []; const recorder = new MediaRecorder(stream);
+        recordings.set(idx, { stream, recorder, chunks, blobUrl:null });
+        recorder.ondataavailable = e => { if(e.data && e.data.size>0){ chunks.push(e.data); } };
+        recorder.onstop = () => {
+          const data = recordings.get(idx); if(!data) return;
+          const blob = new Blob(data.chunks, { type: 'audio/webm' });
+          if(data.blobUrl){ URL.revokeObjectURL(data.blobUrl); }
+          data.blobUrl = URL.createObjectURL(blob); btnPlayRec.disabled = false;
+          data.stream.getTracks().forEach(t => t.stop()); activeRecIdx = null;
+        };
+        recorder.start(); activeRecIdx = idx;
+        lineEl.classList.add('recording'); btnRec.disabled = true; btnRecStop.disabled = false;
+      } catch(err){
+        console.error(err);
+        alert('録音を開始できませんでした。ブラウザのマイク権限をご確認ください。');
+      }
+    }
+    async function stopRecording(idx){
+      const data = recordings.get(idx); if(!data || !data.recorder) return;
+      const lineEl = document.querySelector('.line[data-idx="'+idx+'"]');
+      const btnRec = lineEl.querySelector('[data-action="rec"]');
+      const btnRecStop = lineEl.querySelector('[data-action="recstop"]');
+      try{ if(data.recorder.state === 'recording'){ data.recorder.stop(); } }catch(e){ console.warn(e); }
+      lineEl.classList.remove('recording'); btnRec.disabled = false; btnRecStop.disabled = true;
+    }
+    function playMyRecording(idx){
+      const data = recordings.get(idx); if(!data || !data.blobUrl) return;
+      const audio = new Audio(data.blobUrl); audio.play().catch(console.error);
+    }
+
+    // Delegation for app buttons
+    document.getElementById('jpText').addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-action]'); if(!btn) return;
+      const idx = parseInt(btn.dataset.idx, 10); const action = btn.dataset.action;
+      switch(action){
+        case 'play': playLine(idx); break;
+        case 'pause': pauseLine(idx); break;
+        case 'resume': resumeLine(idx); break;
+        case 'stop': stopLine(idx); break;
+        case 'rec': startRecording(idx); break;
+        case 'recstop': stopRecording(idx); break;
+        case 'playrec': playMyRecording(idx); break;
+      }
+    });
+    // --- APPLICATION SCRIPT END ---
+  </script>
+</body>
+</html>
+```
